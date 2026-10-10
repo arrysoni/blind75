@@ -1,13 +1,26 @@
 """
-Binary Tree Maximum Path Sum (Hard)
+Binary Tree Maximum Path Sum
+Hard
 
 Given the root of a non-empty binary tree, return the maximum path sum of any non-empty path.
-A path does not need to include the root, and a node can't appear in it more than once.
 
-Example 1: root = [1,2,3]                        -> 6   (2 -> 1 -> 3)
-Example 2: root = [-15,10,20,null,null,15,5,-5]  -> 40  (15 -> 20 -> 5)
+A path in a binary tree is a sequence of nodes where each pair of adjacent nodes has an edge connecting them. A node can not appear in the sequence more than once. The path does not necessarily need to include the root.
 
-Constraints: 1 <= nodes <= 30000, -1000 <= Node.val <= 1000
+The path sum of a path is the sum of the node's values in the path.
+
+Example 1:
+Input: root = [1,2,3]
+Output: 6
+Explanation: The path is 2 -> 1 -> 3 with a sum of 2 + 1 + 3 = 6.
+
+Example 2:
+Input: root = [-15,10,20,null,null,15,5,-5]
+Output: 40
+Explanation: The path is 15 -> 20 -> 5 with a sum of 15 + 20 + 5 = 40.
+
+Constraints:
+1 <= The number of nodes in the tree <= 30000.
+-1000 <= Node.val <= 1000
 """
 
 import sys
@@ -81,7 +94,8 @@ if __name__ == "__main__":
         ([1, 2, 3], 6),
         ([-15, 10, 20, None, None, 15, 5, -5], 40),
         ([-3], -3),                      # single negative node
-        ([-1, -2, -3], -1),              # all negatives: best is the single largest node
+        # all negatives: best is the single largest node
+        ([-1, -2, -3], -1),
         ([2, -1], 2),                    # negative child gets dropped
     ]
 
