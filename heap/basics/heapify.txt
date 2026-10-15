@@ -1,0 +1,11 @@
+The built-ins you need (Python heapq)
++-------------------+------------------------------------------------+-----------+
+| Function          | What it does                                   | Cost      |
++-------------------+------------------------------------------------+-----------+
+| heapify(lst)      | Turns a list into a min-heap, in place         | O(n)      |
+| heappush(h, x)    | Adds x, keeps the heap valid                   | O(log n)  |
+| heappop(h)        | Removes and returns the smallest               | O(log n)  |
+| h[0]              | Peeks at the smallest without removing it      | O(1)      |
+| heapreplace(h, x) | Pops the smallest, then pushes x, in one step  | O(log n)  |
+| heappushpop(h, x) | Pushes x, then pops the smallest               | O(log n)  |
++-------------------+------------------------------------------------+-----------+
